@@ -1,8 +1,8 @@
-package day1;
+package practice;
 
 import java.util.Scanner;
 
-public class PalindromeNum {
+public class Palindrome_DoWhile {
 
 	public static void main(String[] args) {
 		
@@ -13,19 +13,20 @@ public class PalindromeNum {
 		int orgNum = num;
 		int rev = 0;
 		
-		while(num!=0) {
+		do {
 			
 			rev = rev*10 + num%10;
 			num = num/10;
-		}
-		
-		if(orgNum == rev) {
 			
-			System.out.println(orgNum + " : is a Palindrome Number");
+		} while(num!=0);
+		
+		if(orgNum==rev) {
+			
+			System.out.println("Palindrome....");
 			
 		} else {
 			
-			System.out.println(orgNum + " : is not a Palindrome Number");
+			System.out.println("Not Palindrome....");
 		}
 
 	}

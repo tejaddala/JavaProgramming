@@ -1,32 +1,34 @@
-package day1;
+package practice;
 
 import java.util.Scanner;
 
-public class PalindromeString {
+public class PalindromeString_DoWhile {
 
 	public static void main(String[] args) {
 		
 		Scanner sc = new Scanner(System.in);
-		System.out.println("Enter String: ");
+		System.out.println("Enter the String: ");
 		String str = sc.next();
 		
 		String orgStr = str;
 		String rev = "";
 		
-		int len = str.length();
+		int i=str.length()-1;
 		
-		for(int i=len-1; i>=0; i--) {
+		do {
 			
 			rev = rev + str.charAt(i);
-		}
+			i--;
+			
+		} while(i>=0);
 		
 		if(orgStr.equals(rev)) {
 			
-			System.out.println(orgStr + " : is a Palindrome String");
+			System.out.println("Palindrome...");
 			
 		} else {
 			
-			System.out.println(orgStr + " : is not a Palindrome String");
+			System.out.println("Not Palindrome..");
 		}
 
 	}
